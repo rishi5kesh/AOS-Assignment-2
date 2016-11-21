@@ -1,0 +1,84 @@
+1. Name:     Rishikesh S
+   ID  :     2016H103016G
+   Short ID: h2016016
+
+##############################
+
+2. List of Files:
+driver.c
+	gets file name as commandline argument from user and passes it to the process_file() function.
+
+implementation.c
+	Conatins the implementation of all the functions used in the program.
+
+header.c
+	contains the prototype of all the fucntions used in the program
+
+makefile
+	used to compile/run the program
+
+###############################
+
+3. HOW TO COMPILE:
+	
+	navigate to the directory containing the makefile using cd
+
+	"make compile"
+
+###############################
+
+4. HOW TO USE:
+	
+	Open the make file and replace <filename> with your input filename
+
+	"make run"
+
+###############################
+
+5. Program structure:
+
+	1. main() gets the file name from user via commandline argument and
+	passes it process_file()
+
+	2.process_file() gets the file name opens the file and parses it the set_line_type() and set_line_status() and tokenize()
+
+	3. tokenize() then sends the tokenized commands to do_exec_once() be executed
+
+	4. if the command has pipes then get_pipe_indexes() and do_split_params() are used to split the command according to pipes
+
+	5.do_exec_once() and do_pipe_exec() are then used to execute the pipelined commands
+
+###############################
+
+6. ASSIGNMENT NOT COMPLETED
+
+	What I have done:
+
+	1. Got the filename as commandline argument from user
+	2. Parsed the file as per specifications except for /* */ implementation
+	3. tokenized and executed single commands
+	4. Tried to make multiple pipe seperated commands work
+
+	What I have not done:
+
+	1.did not implement /* * comment
+	2. tried and and failed to implement ultiple pipe seperated commands
+	3. did not implement tee, dup based solution and redirections
+	4. parsed #INTERSTART and #INTERSTOP but did not implement logging
+
+	Why I did not manage to complete my assignment:
+
+		Took too much time to make pipes work and was not able to finish it.
+
+
+###############################
+
+
+7. BUGS:
+	1.Pipe does not work. Shows "Bad file descriptor" error.
+
+###############################
+
+ 
+
+
